@@ -5,6 +5,8 @@ import 'package:crypto_app/src/gen/assets.gen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../../../../core/localization/l10n/s.dart';
+
 class LogoAppBar extends StatelessWidget {
   const LogoAppBar({Key? key}) : super(key: key);
 
@@ -20,7 +22,7 @@ class LogoAppBar extends StatelessWidget {
       flexibleSpace: FlexibleSpaceBar(
         centerTitle: true,
         title: Text(
-          'Choose tokens',
+          S.of(context).tokensTitle,
           style: TextStyles.medium.copyWith(color: Colors.white),
         ),
         background: Assets.lib.src.assets.svg.mainImage.svg(),

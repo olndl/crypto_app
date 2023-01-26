@@ -32,9 +32,6 @@ class $LibSrcAssetsGen {
 class $LibSrcAssetsSvgGen {
   const $LibSrcAssetsSvgGen();
 
-  /// File path: lib/src/assets/svg/cash.svg
-  SvgGenImage get cash => const SvgGenImage('lib/src/assets/svg/cash.svg');
-
   /// File path: lib/src/assets/svg/icon.svg
   SvgGenImage get icon => const SvgGenImage('lib/src/assets/svg/icon.svg');
 
@@ -47,7 +44,7 @@ class $LibSrcAssetsSvgGen {
       const SvgGenImage('lib/src/assets/svg/swap_fill.svg');
 
   /// List of all assets
-  List<SvgGenImage> get values => [cash, icon, mainImage, swapFill];
+  List<SvgGenImage> get values => [icon, mainImage, swapFill];
 }
 
 class Assets {

@@ -12,6 +12,10 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.2
+  #  for localization
+  flutter_localizations:
+    sdk: flutter
+  localization: ^2.1.0
   #  code style
   linter: ^1.27.0
   #  logging events

@@ -6,8 +6,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class CommonButton extends StatelessWidget {
+  final String title;
   final VoidCallback? onTap;
-  const CommonButton({Key? key, required this.onTap}) : super(key: key);
+  const CommonButton({Key? key, required this.onTap, required this.title})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +24,7 @@ class CommonButton extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                'watch'.toUpperCase(),
+                title,
                 style: TextStyles.regular
                     .copyWith(color: Colors.white, fontSize: 26),
               ),
