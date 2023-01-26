@@ -1,5 +1,5 @@
-import 'package:crypto_app/gen/fonts.gen.dart';
 import 'package:crypto_app/src/core/theme/colors_guide.dart';
+import 'package:crypto_app/src/gen/fonts.gen.dart';
 import 'package:flutter/material.dart';
 
 abstract class TextStyles {
@@ -11,28 +11,28 @@ abstract class TextStyles {
     fontFamily: FontFamily.latoRegular,
   );
   static TextStyle bold = TextStyle(
-    fontSize: 32,
+    fontSize: 30,
     color: ColorsGuide.primaryBlack,
     fontWeight: FontWeight.w700,
     letterSpacing: 1.2,
     fontFamily: FontFamily.latoRegular,
   );
   static TextStyle semiBold = TextStyle(
-    fontSize: 32,
+    fontSize: 28,
     color: ColorsGuide.primaryBlack,
     fontWeight: FontWeight.w500,
     letterSpacing: 1.2,
     fontFamily: FontFamily.latoRegular,
   );
   static TextStyle medium = TextStyle(
-    fontSize: 32,
-    color: ColorsGuide.primaryBlack,
+    fontSize: 22,
+    color: ColorsGuide.background,
     fontWeight: FontWeight.w300,
     letterSpacing: 1.2,
     fontFamily: FontFamily.latoRegular,
   );
   static TextStyle regular = TextStyle(
-    fontSize: 32,
+    fontSize: 20,
     color: ColorsGuide.primaryBlack,
     fontWeight: FontWeight.normal,
     letterSpacing: 1.2,

@@ -16,6 +16,8 @@ dependencies:
   linter: ^1.27.0
   #  logging events
   logging: ^1.1.0
+  #  work with svg-pictures
+  flutter_svg: ^1.0.0
   #  http
   dio: ^4.0.6
   #  work with datetime
@@ -32,8 +34,16 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  generate: true
 
+  assets:
+    - lib/src/assets/svg/
   fonts:
     - family: Lato-Regular
       fonts:
         - asset: lib/src/assets/font/Lato-Regular.ttf
+flutter_gen:
+  output: lib/src/gen/
+  style: camel-case
+  integrations:
+    flutter_svg: true
