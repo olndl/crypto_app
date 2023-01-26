@@ -34,6 +34,6 @@ flutter:
   uses-material-design: true
 
   fonts:
-    - family: Livvic-Thin
+    - family: Lato-Regular
       fonts:
         - asset: lib/src/assets/font/Lato-Regular.ttf
