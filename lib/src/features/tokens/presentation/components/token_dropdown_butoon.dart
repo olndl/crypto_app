@@ -20,12 +20,14 @@ class _TokenDropdownButtonState extends State<TokenDropdownButton> {
       ),
       child: DecoratedBox(
         decoration: BoxDecoration(
-          gradient: LinearGradient(colors: [
-            ColorsGuide.firstButtonGrad,
-            ColorsGuide.secondButtonGrad,
-            ColorsGuide.thirdButtonGrad
-            //add more colors
-          ]),
+          gradient: LinearGradient(
+            colors: [
+              ColorsGuide.firstButtonGrad,
+              ColorsGuide.secondButtonGrad,
+              ColorsGuide.thirdButtonGrad
+              //add more colors
+            ],
+          ),
           borderRadius: BorderRadius.circular(40),
           boxShadow: <BoxShadow>[
             BoxShadow(
@@ -60,8 +62,10 @@ class _TokenDropdownButtonState extends State<TokenDropdownButton> {
             return DropdownMenuItem<String>(
               alignment: Alignment.center,
               value: value,
-              child: Text(value,
-                  style: TextStyles.semiBold.copyWith(fontSize: 22)),
+              child: Text(
+                value,
+                style: TextStyles.semiBold.copyWith(fontSize: 22),
+              ),
             );
           }).toList(),
         ),

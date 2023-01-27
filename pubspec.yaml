@@ -42,6 +42,7 @@ flutter:
 
   assets:
     - lib/src/assets/svg/
+    - lib/src/assets/png/
   fonts:
     - family: Lato-Regular
       fonts:

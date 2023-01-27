@@ -1,5 +1,4 @@
 import 'package:crypto_app/src/core/theme/colors_guide.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class CustomScaffold extends StatelessWidget {

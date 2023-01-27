@@ -1,6 +1,5 @@
 import 'package:crypto_app/src/core/extensions/extensions.dart';
 import 'package:crypto_app/src/core/theme/colors_guide.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class CircleButton extends StatelessWidget {

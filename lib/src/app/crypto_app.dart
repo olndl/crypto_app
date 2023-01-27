@@ -23,7 +23,7 @@ class CryptoApp extends StatelessWidget {
           ],
           supportedLocales: S.supportedLocales,
           theme: AppTheme.lightTheme.copyWith(),
-          home: SwapTokens(),
+          home: SwapTokensPage(),
         );
       },
     );

@@ -26,14 +26,45 @@ class $LibSrcGen {
 class $LibSrcAssetsGen {
   const $LibSrcAssetsGen();
 
+  $LibSrcAssetsPngGen get png => const $LibSrcAssetsPngGen();
   $LibSrcAssetsSvgGen get svg => const $LibSrcAssetsSvgGen();
+}
+
+class $LibSrcAssetsPngGen {
+  const $LibSrcAssetsPngGen();
+
+  /// File path: lib/src/assets/png/card.png
+  AssetGenImage get card => const AssetGenImage('lib/src/assets/png/card.png');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [card];
 }
 
 class $LibSrcAssetsSvgGen {
   const $LibSrcAssetsSvgGen();
 
+  /// File path: lib/src/assets/svg/another_pair.svg
+  SvgGenImage get anotherPair =>
+      const SvgGenImage('lib/src/assets/svg/another_pair.svg');
+
   /// File path: lib/src/assets/svg/icon.svg
   SvgGenImage get icon => const SvgGenImage('lib/src/assets/svg/icon.svg');
+
+  /// File path: lib/src/assets/svg/icon_stat.svg
+  SvgGenImage get iconStat =>
+      const SvgGenImage('lib/src/assets/svg/icon_stat.svg');
+
+  /// File path: lib/src/assets/svg/image_cash.svg
+  SvgGenImage get imageCash =>
+      const SvgGenImage('lib/src/assets/svg/image_cash.svg');
+
+  /// File path: lib/src/assets/svg/image_coins.svg
+  SvgGenImage get imageCoins =>
+      const SvgGenImage('lib/src/assets/svg/image_coins.svg');
+
+  /// File path: lib/src/assets/svg/image_hands.svg
+  SvgGenImage get imageHands =>
+      const SvgGenImage('lib/src/assets/svg/image_hands.svg');
 
   /// File path: lib/src/assets/svg/main_image.svg
   SvgGenImage get mainImage =>
@@ -44,7 +75,16 @@ class $LibSrcAssetsSvgGen {
       const SvgGenImage('lib/src/assets/svg/swap_fill.svg');
 
   /// List of all assets
-  List<SvgGenImage> get values => [icon, mainImage, swapFill];
+  List<SvgGenImage> get values => [
+        anotherPair,
+        icon,
+        iconStat,
+        imageCash,
+        imageCoins,
+        imageHands,
+        mainImage,
+        swapFill
+      ];
 }
 
 class Assets {

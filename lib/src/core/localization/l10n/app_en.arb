@@ -1,4 +1,8 @@
 {
     "tokensTitle": "Choose tokens",
-    "watchButton": "Watch"
+    "watchButton": "Watch",
+    "chooseCurrency": "Choose currency",
+    "anotherPair": "Get another pair",
+    "lastUpdate": "Last update",
+    "at": "at"
 }

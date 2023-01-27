@@ -1,7 +1,6 @@
 import 'package:crypto_app/src/core/theme/colors_guide.dart';
+import 'package:crypto_app/src/gen/fonts.gen.dart';
 import 'package:flutter/material.dart';
-
-import '../../gen/fonts.gen.dart';
 
 class AppTheme {
   static const _defaultFontFamily = FontFamily.latoRegular;

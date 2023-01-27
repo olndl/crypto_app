@@ -1,4 +1,8 @@
 {
     "tokensTitle": "Выберите токены",
-    "watchButton": "Смотреть"
+    "watchButton": "Смотреть",
+    "chooseCurrency": "Выберите валюту",
+    "anotherPair": "Выбрать другую пару",
+    "lastUpdate": "Обновлено",
+    "at": "в"
 }
