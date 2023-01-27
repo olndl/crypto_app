@@ -25,15 +25,15 @@ class CircleButton extends StatelessWidget {
                 0,
                 0,
                 0,
-                0.7647058823529411,
+                0.8980392156862745,
               ),
               blurRadius: 5,
             ) //blur radius of shadow
           ],
           shape: BoxShape.circle,
           gradient: LinearGradient(
-            begin: Alignment.topRight,
-            end: Alignment.bottomLeft,
+            begin: Alignment.centerLeft,
+            end: Alignment.centerRight,
             colors: [
               ColorsGuide.firstIconButtonGrad,
               ColorsGuide.secondIconButtonGrad,
