@@ -47,7 +47,3 @@ app.*.map.json
 *.g.dart
 *.freezed.dart
 *.gen.dart
-
-# Secrets
-lib/src/app/app_secrets.dart
-*.tar
