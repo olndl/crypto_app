@@ -32,6 +32,6 @@ or
 - `flutter_riverpod` for state management.
 - `http` to work with Http client.
 - `freezed` - code generator
-- `web3dart`vto interact with the Ethereum blockchain.
+- `web3dart` to interact with the Ethereum blockchain.
 - `linter` - for code rules.
 - more at `pubspec.yaml`
