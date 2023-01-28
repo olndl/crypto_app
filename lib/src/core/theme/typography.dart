@@ -6,20 +6,20 @@ abstract class TextStyles {
   static TextStyle extraBold = TextStyle(
     fontSize: 32,
     fontWeight: FontWeight.w900,
-    color: ColorsGuide.primaryBlack,
+    color: ColorsGuide.background,
     letterSpacing: 1.2,
     fontFamily: FontFamily.latoRegular,
   );
   static TextStyle bold = TextStyle(
     fontSize: 30,
-    color: ColorsGuide.primaryBlack,
+    color: ColorsGuide.background,
     fontWeight: FontWeight.w700,
     letterSpacing: 1.2,
     fontFamily: FontFamily.latoRegular,
   );
   static TextStyle semiBold = TextStyle(
     fontSize: 28,
-    color: ColorsGuide.primaryBlack,
+    color: ColorsGuide.background,
     fontWeight: FontWeight.w500,
     letterSpacing: 1.2,
     fontFamily: FontFamily.latoRegular,

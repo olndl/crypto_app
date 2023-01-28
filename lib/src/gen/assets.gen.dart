@@ -26,18 +26,47 @@ class $LibSrcGen {
 class $LibSrcAssetsGen {
   const $LibSrcAssetsGen();
 
+  $LibSrcAssetsAbiGen get abi => const $LibSrcAssetsAbiGen();
   $LibSrcAssetsPngGen get png => const $LibSrcAssetsPngGen();
   $LibSrcAssetsSvgGen get svg => const $LibSrcAssetsSvgGen();
+}
+
+class $LibSrcAssetsAbiGen {
+  const $LibSrcAssetsAbiGen();
+
+  /// File path: lib/src/assets/abi/abi.json
+  String get abi => 'lib/src/assets/abi/abi.json';
+
+  /// List of all assets
+  List<String> get values => [abi];
 }
 
 class $LibSrcAssetsPngGen {
   const $LibSrcAssetsPngGen();
 
-  /// File path: lib/src/assets/png/card.png
-  AssetGenImage get card => const AssetGenImage('lib/src/assets/png/card.png');
+  /// File path: lib/src/assets/png/BNB.png
+  AssetGenImage get bnb => const AssetGenImage('lib/src/assets/png/BNB.png');
+
+  /// File path: lib/src/assets/png/BTC.png
+  AssetGenImage get btc => const AssetGenImage('lib/src/assets/png/BTC.png');
+
+  /// File path: lib/src/assets/png/BUSD.png
+  AssetGenImage get busd => const AssetGenImage('lib/src/assets/png/BUSD.png');
+
+  /// File path: lib/src/assets/png/CAKE.png
+  AssetGenImage get cake => const AssetGenImage('lib/src/assets/png/CAKE.png');
+
+  /// File path: lib/src/assets/png/ETH.png
+  AssetGenImage get eth => const AssetGenImage('lib/src/assets/png/ETH.png');
+
+  /// File path: lib/src/assets/png/USD.png
+  AssetGenImage get usd => const AssetGenImage('lib/src/assets/png/USD.png');
+
+  /// File path: lib/src/assets/png/USDT.png
+  AssetGenImage get usdt => const AssetGenImage('lib/src/assets/png/USDT.png');
 
   /// List of all assets
-  List<AssetGenImage> get values => [card];
+  List<AssetGenImage> get values => [bnb, btc, busd, cake, eth, usd, usdt];
 }
 
 class $LibSrcAssetsSvgGen {
@@ -46,6 +75,10 @@ class $LibSrcAssetsSvgGen {
   /// File path: lib/src/assets/svg/another_pair.svg
   SvgGenImage get anotherPair =>
       const SvgGenImage('lib/src/assets/svg/another_pair.svg');
+
+  /// File path: lib/src/assets/svg/arrow_down.svg
+  SvgGenImage get arrowDown =>
+      const SvgGenImage('lib/src/assets/svg/arrow_down.svg');
 
   /// File path: lib/src/assets/svg/icon.svg
   SvgGenImage get icon => const SvgGenImage('lib/src/assets/svg/icon.svg');
@@ -77,6 +110,7 @@ class $LibSrcAssetsSvgGen {
   /// List of all assets
   List<SvgGenImage> get values => [
         anotherPair,
+        arrowDown,
         icon,
         iconStat,
         imageCash,
