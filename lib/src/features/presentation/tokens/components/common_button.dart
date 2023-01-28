@@ -20,7 +20,7 @@ class CommonButton extends StatelessWidget {
       onTap: onTap,
       indent: 3,
       child: Container(
-        width: 80.percentOfWidth,
+        width: 90.percentOfWidth,
         height: 15.percentOfHeight,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -32,7 +32,7 @@ class CommonButton extends StatelessWidget {
               maxLines: 2,
             ),
             SizedBox(
-              width: 10,
+              width: .5.percentOfWidth,
             ),
             icon
           ],
