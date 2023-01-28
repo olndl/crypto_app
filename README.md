@@ -1,5 +1,5 @@
 # FlutterCryptoApp
-The simple Flutter app for displaying the rate in the BNB network of token A to token B on a pancackeswap.
+The simple Flutter app for displaying the rate in the BNB network of token A to token B on a pancakeswap.
 ## Features
 #### Basic
 - [x] Display of current exchange rates
