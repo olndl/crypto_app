@@ -2,12 +2,15 @@
 Simple Flutter app for displaying the rate in the BNB network of token A to token B on a pancacke swap.
 ## Features
 #### Basic
+- [x] Display of current exchange rates
 - [x] Screens: tokens swap, tokens list, exchange rate screen
 - [x] Exchange rate is updated every 60 seconds
-- [X] State-management and DI implemented using `flutter_riverpod`
-- [x] Two languages supported - ru, eng
+- [x] Supports tokens: USDC, BUSD, WBNB, USDT, BTCB, ETH, CAKE
+- [x] State-management and DI implemented using `flutter_riverpod`
+- [x] Implemented Navigation
+- [x] Custom design
+- [x] Internationalization - ru, eng
 - [x] App icon added
-- [X] Implemented Navigation
 
 ## Screenshots
 <p float="left">
