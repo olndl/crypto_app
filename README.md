@@ -1,16 +1,37 @@
-# crypto_app
+# FlutterCryptoApp
+Simple Flutter app for displaying the rate in the BNB network of token A to token B on a pancacke swap.
+## Features
+#### Basic
+- [x] Screens: tokens swap, tokens list, exchange rate screen
+- [x] Exchange rate is updated every 60 seconds
+- [X] State-management and DI implemented using `flutter_riverpod`
+- [x] Two languages supported - ru, eng
+- [x] App icon added
+- [X] Implemented Navigation
 
-A new Flutter project.
+## Screenshots
+<p float="left">
+<img src="https://github.com/olndl/crypto_app/blob/f/logic/screenshots/screens.png" height="400"/>
+</p>
 
-## Getting Started
+## Video
+<img src="https://github.com/olndl/crypto_app/blob/f/logic/screenshots/video.gif" width="200" height="400"/>
 
-This project is a starting point for a Flutter application.
+## Get Started
+Generate file *.freezed.dart, you can use this command on terminal :
 
-A few resources to get you started if this is your first Flutter project:
+`flutter pub run build_runner build --delete-conflicting-outputs`
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+or 
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+`bash scripts/generate-all.sh`
+
+
+## Packages Used
+
+- `flutter_riverpod` for state management.
+- `http` to work with Http client.
+- `freezed` - code generator
+- `web3dart`vto interact with the Ethereum blockchain.
+- `linter` - for code rules.
+- more at `pubspec.yaml`
