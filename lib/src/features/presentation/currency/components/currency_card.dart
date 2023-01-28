@@ -1,4 +1,5 @@
 import 'package:crypto_app/src/core/extensions/extensions.dart';
+import 'package:crypto_app/src/core/navigation/provider.dart';
 import 'package:crypto_app/src/core/theme/colors_guide.dart';
 import 'package:crypto_app/src/core/theme/typography.dart';
 import 'package:crypto_app/src/features/domain/models/token.dart';
@@ -11,9 +12,11 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 class CurrencyCard extends ConsumerWidget {
   final Token token;
   final bool isFirstToken;
-  const CurrencyCard(
-      {Key? key, required this.token, required this.isFirstToken})
-      : super(key: key);
+  const CurrencyCard({
+    Key? key,
+    required this.token,
+    required this.isFirstToken,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -22,7 +25,7 @@ class CurrencyCard extends ConsumerWidget {
         isFirstToken
             ? ref.read(tokensChangeProvider).changeFirst(token)
             : ref.read(tokensChangeProvider).changeSecond(token);
-        Navigator.pop(context);
+        ref.read(routerDelegateProvider).pop();
       },
       child: Padding(
         padding: const EdgeInsets.only(left: 15),

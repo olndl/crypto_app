@@ -76,6 +76,10 @@ class $LibSrcAssetsSvgGen {
   SvgGenImage get anotherPair =>
       const SvgGenImage('lib/src/assets/svg/another_pair.svg');
 
+  /// File path: lib/src/assets/svg/arrow_back.svg
+  SvgGenImage get arrowBack =>
+      const SvgGenImage('lib/src/assets/svg/arrow_back.svg');
+
   /// File path: lib/src/assets/svg/arrow_down.svg
   SvgGenImage get arrowDown =>
       const SvgGenImage('lib/src/assets/svg/arrow_down.svg');
@@ -110,6 +114,7 @@ class $LibSrcAssetsSvgGen {
   /// List of all assets
   List<SvgGenImage> get values => [
         anotherPair,
+        arrowBack,
         arrowDown,
         icon,
         iconStat,

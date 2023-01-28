@@ -1,11 +1,13 @@
 import 'package:crypto_app/src/core/extensions/extensions.dart';
+import 'package:crypto_app/src/core/navigation/model.dart';
+import 'package:crypto_app/src/core/navigation/provider.dart';
 import 'package:crypto_app/src/core/theme/colors_guide.dart';
 import 'package:crypto_app/src/core/theme/typography.dart';
-import 'package:crypto_app/src/features/presentation/currency/pages/currency_page.dart';
 import 'package:crypto_app/src/features/presentation/tokens/components/click_style.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class TokenChooseButton extends StatelessWidget {
+class TokenChooseButton extends ConsumerWidget {
   final String tokenName;
   final bool isFirstToken;
   const TokenChooseButton({
@@ -15,23 +17,21 @@ class TokenChooseButton extends StatelessWidget {
   });
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return ClickStyle(
       onTap: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => CurrencyPage(
-              isFirstToken: isFirstToken,
-            ),
-          ),
-        );
+        ref.read(routerDelegateProvider).navigate([
+          ChooseTokenSegment(),
+          ListCurrencySegment(isFirstToken: isFirstToken)
+        ]);
       },
       radius: 40,
       splashColor: Colors.white.withOpacity(.12),
       child: Padding(
         padding: EdgeInsets.symmetric(
-            horizontal: 5.percentOfWidth, vertical: 1.percentOfHeight),
+          horizontal: 5.percentOfWidth,
+          vertical: 1.percentOfHeight,
+        ),
         child: DecoratedBox(
           decoration: BoxDecoration(
             gradient: LinearGradient(

@@ -1,6 +1,6 @@
 import 'package:crypto_app/src/core/localization/l10n/s.dart';
-import 'package:crypto_app/src/features/presentation/currency/pages/currency_page.dart';
-import 'package:crypto_app/src/features/presentation/exchange_rates/pages/exchange_rates_page.dart';
+import 'package:crypto_app/src/core/navigation/model.dart';
+import 'package:crypto_app/src/core/navigation/provider.dart';
 import 'package:crypto_app/src/features/presentation/providers/tokens_change_provider.dart';
 import 'package:crypto_app/src/features/presentation/tokens/components/common_button.dart';
 import 'package:crypto_app/src/features/presentation/tokens/components/custom_scaffold.dart';
@@ -19,36 +19,23 @@ class SwapTokensPage extends ConsumerWidget {
         physics: const BouncingScrollPhysics(),
         slivers: [
           LogoAppBar(
+            isMainPage: true,
             backgroundImage: Assets.lib.src.assets.svg.mainImage.svg(),
             title: S.of(context).tokensTitle,
           ),
           TokensSwap(
-            firstToken: currantPair.token1?.name ?? '',
-            secondToken: currantPair.token2?.name ?? '',
+            currantPair: currantPair,
           ),
           SliverToBoxAdapter(
             child: CommonButton(
-              onTap: () => {
-                currantPair.token1!.contract.isEmpty ||
-                        currantPair.token2!.contract.isEmpty
-                    ? Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) =>
-                                CurrencyPage(isFirstToken: true)),
-                      )
-                    : ref
-                        .read(tokensChangeProvider)
-                        .getPrice(currantPair.token1!.contract,
-                            currantPair.token2!.contract)
-                        .then(
-                          (_) => Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => ExchangeRatesPage(),
-                            ),
-                          ),
-                        ),
+              onTap: () async => {
+                await ref.read(tokensChangeProvider).getPrice(
+                      currantPair.token1!.contract,
+                      currantPair.token2!.contract,
+                    ),
+                ref
+                    .read(routerDelegateProvider)
+                    .navigate([ChooseTokenSegment(), ExchangeRateSegment()]),
               },
               title: S.of(context).watchButton,
               icon: Assets.lib.src.assets.svg.icon.svg(),

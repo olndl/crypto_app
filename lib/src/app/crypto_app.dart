@@ -1,20 +1,23 @@
 import 'package:crypto_app/src/core/dimensions/adaptive_widget.dart';
 import 'package:crypto_app/src/core/localization/l10n/s.dart';
+import 'package:crypto_app/src/core/navigation/parser.dart';
+import 'package:crypto_app/src/core/navigation/provider.dart';
 import 'package:crypto_app/src/core/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import '../features/presentation/tokens/pages/swap_tokens_page.dart';
-
-class CryptoApp extends StatelessWidget {
+class CryptoApp extends ConsumerWidget {
   const CryptoApp({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return AdaptiveWidget(
       builder: (context, orientation) {
-        return MaterialApp(
+        return MaterialApp.router(
+          routerDelegate: ref.read(routerDelegateProvider),
+          routeInformationParser: RouteInformationParserImpl(),
           debugShowCheckedModeBanner: false,
           localizationsDelegates: const [
             AppLocalizations.delegate,
@@ -23,8 +26,14 @@ class CryptoApp extends StatelessWidget {
             GlobalCupertinoLocalizations.delegate,
           ],
           supportedLocales: S.supportedLocales,
-          theme: AppTheme.lightTheme.copyWith(),
-          home: SwapTokensPage(),
+          theme: AppTheme.lightTheme.copyWith(
+            pageTransitionsTheme: const PageTransitionsTheme(
+              builders: {
+                TargetPlatform.android: FadeUpwardsPageTransitionsBuilder(),
+                TargetPlatform.iOS: OpenUpwardsPageTransitionsBuilder(),
+              },
+            ),
+          ),
         );
       },
     );

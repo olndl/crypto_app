@@ -1,5 +1,6 @@
 import 'package:crypto_app/src/core/extensions/extensions.dart';
 import 'package:crypto_app/src/core/localization/l10n/s.dart';
+import 'package:crypto_app/src/core/navigation/provider.dart';
 import 'package:crypto_app/src/features/presentation/currency/components/currency_list.dart';
 import 'package:crypto_app/src/features/presentation/tokens/components/custom_scaffold.dart';
 import 'package:crypto_app/src/features/presentation/tokens/components/logo_app_bar.dart';
@@ -20,6 +21,10 @@ class CurrencyPage extends ConsumerWidget {
       body: CustomScrollView(
         slivers: [
           LogoAppBar(
+            isMainPage: false,
+            onTap: () {
+              ref.read(routerDelegateProvider).pop();
+            },
             backgroundImage: Padding(
               padding: EdgeInsets.all(15.percentOfWidth),
               child: Assets.lib.src.assets.svg.imageHands.svg(),

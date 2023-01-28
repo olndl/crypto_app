@@ -27,9 +27,6 @@ jobs:
       - name: Lint
         run: flutter analyze --fatal-infos --fatal-warnings
 
-      - name: Build Android
-        run: flutter build appbundle
-
   build-ios:
     name: Build iOS
     runs-on: macos-latest
@@ -51,6 +48,3 @@ jobs:
 
       - name: Run build_runner
         run: flutter pub run build_runner build --delete-conflicting-outputs
-
-      - name: Build iOS
-        run: flutter build ios --release --no-codesign

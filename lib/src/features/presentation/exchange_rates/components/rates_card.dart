@@ -22,55 +22,59 @@ class RatesCard extends ConsumerWidget {
         children: <Widget>[
           CustomCard(
             width: 90.percentOfWidth,
-            height: 25.percentOfHeight,
+            height: 40.percentOfHeight,
             cardColor: ColorsGuide.primaryPink,
             child: Padding(
               padding: EdgeInsets.symmetric(
                 horizontal: 3.percentOfWidth,
                 vertical: 2.percentOfHeight,
               ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Row(
-                    children: [
-                      Assets.lib.src.assets.svg.iconStat.svg(width: 30),
-                      SizedBox(
-                        width: 5,
-                      ),
-                      Text(
-                        S.of(context).today,
-                        style: TextStyles.medium,
-                      ),
-                    ],
-                  ),
-                  Text(
-                    '${pair.token1!.name} / ${pair.token2!.name}',
-                    style: TextStyles.semiBold.copyWith(color: Colors.white),
-                  ),
-                  Text(
-                    '${date.cost}',
-                    style: TextStyles.extraBold.copyWith(color: Colors.white),
-                  ),
-                  SizedBox(
-                    height: 32,
-                  ),
-                  Text(
-                    '${S.of(context).lastUpdate} ${date.dateMDY}',
-                    style: TextStyles.regular.copyWith(
-                      fontSize: 14,
-                      color: Colors.white,
+              child: Container(
+                height: 25.percentOfHeight,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Row(
+                      children: [
+                        Assets.lib.src.assets.svg.iconStat.svg(width: 30),
+                        SizedBox(
+                          width: 5,
+                        ),
+                        Text(
+                          S.of(context).today,
+                          style: TextStyles.medium,
+                        ),
+                      ],
                     ),
-                  ),
-                  Text(
-                    '${S.of(context).at} ${date.dateH}',
-                    style: TextStyles.regular.copyWith(
-                      fontSize: 14,
-                      color: Colors.white,
+                    Text(
+                      '${pair.token1!.name} / ${pair.token2!.name}',
+                      style: TextStyles.semiBold,
                     ),
-                  )
-                ],
+                    Text(
+                      '${date.cost}',
+                      style: TextStyles.extraBold,
+                    ),
+                    SizedBox(
+                      height: 32,
+                    ),
+                    Text(
+                      '${S.of(context).lastUpdate}',
+                      style: TextStyles.regular
+                          .copyWith(color: ColorsGuide.background),
+                    ),
+                    Text(
+                      '${date.dateMDY}',
+                      style: TextStyles.regular
+                          .copyWith(color: ColorsGuide.background),
+                    ),
+                    Text(
+                      '${S.of(context).at} ${date.dateH}',
+                      style: TextStyles.regular
+                          .copyWith(color: ColorsGuide.background),
+                    )
+                  ],
+                ),
               ),
             ),
           ),

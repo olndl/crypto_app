@@ -1,8 +1,7 @@
 import 'package:crypto_app/src/core/extensions/extensions.dart';
 import 'package:crypto_app/src/core/theme/typography.dart';
+import 'package:crypto_app/src/features/presentation/tokens/components/click_style.dart';
 import 'package:flutter/material.dart';
-
-import 'click_style.dart';
 
 class CommonButton extends StatelessWidget {
   final String title;
