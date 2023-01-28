@@ -26,6 +26,8 @@ jobs:
 
       - name: Lint
         run: flutter analyze --fatal-infos --fatal-warnings
+        with:
+          token: ${{ secrets.TOKEN }}
 
   build-ios:
     name: Build iOS
@@ -48,3 +50,5 @@ jobs:
 
       - name: Run build_runner
         run: flutter pub run build_runner build --delete-conflicting-outputs
+        with:
+          token: ${{ secrets.TOKEN }}
