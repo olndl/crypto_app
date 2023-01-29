@@ -19,7 +19,7 @@ The simple Flutter app for displaying the rate in the BNB network of token A to 
 
 ## Video
 
-https://user-images.githubusercontent.com/82782889/215292828-eb918a75-582c-4be7-8a3a-de796909dbae.mov
+https://user-images.githubusercontent.com/82782889/215299380-63520563-c5bf-4d0d-afb1-f210413c2bb7.mov
 
 ## Get Started
 Generate file *.freezed.dart, you can use this command on terminal :
