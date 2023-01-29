@@ -9,7 +9,7 @@ The simple Flutter app for displaying the rate in the BNB network of token A to 
 - [x] State-management and DI implemented using `flutter_riverpod`
 - [x] Implemented Navigation
 - [x] Custom design
-- [x] Internationalization - ru, eng
+- [x] Localization - ru, eng
 - [x] App icon added  ![40](https://user-images.githubusercontent.com/82782889/215292914-1bfbe5f5-0071-469f-bdc1-c8e314e4c2e8.png)
 
 
