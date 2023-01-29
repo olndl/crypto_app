@@ -6,7 +6,7 @@ import 'package:crypto_app/src/features/domain/models/token.dart';
 import 'package:crypto_app/src/features/presentation/currency/components/custom_card.dart';
 import 'package:crypto_app/src/features/presentation/providers/tokens_change_provider.dart';
 import 'package:crypto_app/src/features/presentation/tokens/components/click_style.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class CurrencyCard extends ConsumerWidget {
@@ -34,33 +34,24 @@ class CurrencyCard extends ConsumerWidget {
           children: <Widget>[
             CustomCard(
               width: 70.percentOfWidth,
-              height: 12.percentOfHeight,
+              height: 10.percentOfHeight,
               cardColor: ColorsGuide.background,
               child: Padding(
                 padding: EdgeInsets.symmetric(
-                  horizontal: 3.percentOfWidth,
+                  horizontal: 2.percentOfWidth,
                   vertical: 2.percentOfHeight,
                 ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Text(
-                      token.name,
-                      textAlign: TextAlign.center,
-                      style: TextStyles.regular,
-                    ),
-                  ],
+                child: ListTile(
+                  title: Text(
+                    token.name,
+                    textAlign: TextAlign.center,
+                    style: TextStyles.regular,
+                  ),
+                  leading: Image.asset(
+                    token.coinImage!,
+                    width: 20.percentOfWidth,
+                  ),
                 ),
-              ),
-            ),
-            Positioned(
-              top: 15,
-              bottom: 20,
-              left: 0,
-              child: Image.asset(
-                token.coinImage!,
-                width: 30.percentOfWidth,
               ),
             ),
           ],
