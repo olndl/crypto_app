@@ -27,34 +27,26 @@ class CurrencyCard extends ConsumerWidget {
             : ref.read(tokensChangeProvider).changeSecond(token);
         ref.read(routerDelegateProvider).pop();
       },
-      child: Padding(
-        padding: const EdgeInsets.only(left: 15),
-        child: Stack(
-          alignment: Alignment.topCenter,
-          children: <Widget>[
-            CustomCard(
-              width: 70.percentOfWidth,
-              height: 10.percentOfHeight,
-              cardColor: ColorsGuide.background,
-              child: Padding(
-                padding: EdgeInsets.symmetric(
-                  horizontal: 2.percentOfWidth,
-                  vertical: 2.percentOfHeight,
-                ),
-                child: ListTile(
-                  title: Text(
-                    token.name,
-                    textAlign: TextAlign.center,
-                    style: TextStyles.regular,
-                  ),
-                  leading: Image.asset(
-                    token.coinImage!,
-                    width: 20.percentOfWidth,
-                  ),
-                ),
-              ),
+      child: CustomCard(
+        width: 50.percentOfWidth,
+        height: 10.percentOfHeight,
+        cardColor: ColorsGuide.background,
+        child: Padding(
+          padding: EdgeInsets.symmetric(
+            horizontal: 2.percentOfWidth,
+            vertical: 2.percentOfHeight,
+          ),
+          child: ListTile(
+            title: Text(
+              token.name,
+              textAlign: TextAlign.center,
+              style: TextStyles.regular,
             ),
-          ],
+            leading: Image.asset(
+              token.coinImage!,
+              width: 20.percentOfWidth,
+            ),
+          ),
         ),
       ),
     );

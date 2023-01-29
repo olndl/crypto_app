@@ -19,7 +19,7 @@ class CustomCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.symmetric(
-        vertical: 5.percentOfHeight,
+        vertical: 2.percentOfHeight,
         horizontal: 5.percentOfWidth,
       ),
       width: width,
