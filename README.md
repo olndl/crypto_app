@@ -10,6 +10,7 @@ The simple Flutter app for displaying the rate in the BNB network of token A to 
 - [x] Implemented Navigation
 - [x] Custom design
 - [x] Localization - ru, eng
+- [x] CI workflow
 - [x] App icon added  ![40](https://user-images.githubusercontent.com/82782889/215292914-1bfbe5f5-0071-469f-bdc1-c8e314e4c2e8.png)
 
 
