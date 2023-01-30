@@ -20,11 +20,12 @@ class LogoAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SliverAppBar(
-      expandedHeight: 45.percentOfHeight,
+      expandedHeight: 40.percentOfHeight,
       elevation: 0.0,
       backgroundColor: ColorsGuide.firstBackgroundGrad,
       stretch: true,
       pinned: true,
+      centerTitle: true,
       automaticallyImplyLeading: false,
       floating: true,
       flexibleSpace: FlexibleSpaceBar(

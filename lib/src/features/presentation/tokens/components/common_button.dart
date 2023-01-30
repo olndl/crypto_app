@@ -21,7 +21,7 @@ class CommonButton extends StatelessWidget {
       indent: 3,
       child: Container(
         width: 90.percentOfWidth,
-        height: 15.percentOfHeight,
+        height: 10.percentOfHeight,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
