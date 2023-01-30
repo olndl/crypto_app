@@ -12,6 +12,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:http/http.dart';
 import 'package:intl/intl.dart';
 import 'package:web3dart/web3dart.dart';
+import 'package:web_socket_channel/io.dart';
 
 final tokensChangeProvider =
     ChangeNotifierProvider<ChangeTokensProvider>((ref) {
@@ -68,7 +69,14 @@ class ChangeTokensProvider with ChangeNotifier {
 
   Future<void> getPrice(String firstToken, String secondToken) async {
     Client httpClient = Client();
-    Web3Client ethereumClient = Web3Client(ethereumClientUrl, httpClient);
+    Web3Client ethereumClient = Web3Client(
+      ethereumClientUrl,
+      httpClient,
+      socketConnector: () => IOWebSocketChannel.connect(
+        ethereumClientUrl,
+        pingInterval: Duration(seconds: 60),
+      ).cast<String>(),
+    );
     String abi = await rootBundle.loadString(Urls.pathAbi);
     DeployedContract contract = await _getContract(abi);
 
