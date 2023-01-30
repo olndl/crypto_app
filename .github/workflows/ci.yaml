@@ -26,3 +26,6 @@ jobs:
 
       - name: Lint
         run: flutter analyze --fatal-infos --fatal-warnings
+
+      - name: Build Android
+        run: flutter build apk --debug --split-per-abi
