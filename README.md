@@ -16,7 +16,7 @@ The simple Flutter app for displaying the rate in the BNB network of token A to 
 
 ## Screenshots
 
-<img width="859" alt="screens" src="https://user-images.githubusercontent.com/82782889/215299124-9aac6b96-334f-457d-becc-1fc52bd6a6f6.png">
+<img width="860" alt="screens" src="https://user-images.githubusercontent.com/82782889/215299124-9aac6b96-334f-457d-becc-1fc52bd6a6f6.png">
 
 ## Video
 
